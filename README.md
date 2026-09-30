@@ -38,29 +38,6 @@ pip install pandas
 bash
 python etl_data_quality_validator.py
 
-3. Sample output
-
-======================================================================
-  DATA QUALITY REPORT — ACCOUNTS_DWH_LOAD
-  Run: 2026-09-29 19:30:00
-======================================================================
-  Total Checks : 9
-  PASSED       : 8  ✅
-  FAILED       : 1  ❌
-  WARNINGS     : 0  ⚠️
-======================================================================
-  Value Range — currency   FAIL   Allowed: {USD, GBP, EUR, SGD, AED}   1 violations
-======================================================================
-
-The report is also saved as dq_report.csv in the project folder.
-
-Sample Data
-
-The sample_data/ folder contains a simulated BFSI accounts dataset:
-
-source.csv — 5 account records extracted from source system
-target.csv — Same 5 records post-ETL load, with 1 intentional defect (currency = XXX) to demonstrate defect detection
-customers.csv — Reference table for referential integrity check
 Skills Demonstrated
 Python (pandas, dataclasses, logging)
 ETL data quality validation concepts
